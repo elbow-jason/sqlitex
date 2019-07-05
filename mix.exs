@@ -21,8 +21,9 @@ defmodule Sqlitex.Mixfile do
       A thin Elixir wrapper around esqlite
       """,
       dialyzer: [plt_add_deps: :transitive],
-      docs: [main: "readme", # The main page in the docs
-             extras: ["README.md"]]]
+      # The main page in the docs
+      docs: [main: "readme", extras: ["README.md"]]
+    ]
   end
 
   # Configuration for the OTP application
@@ -33,7 +34,7 @@ defmodule Sqlitex.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-      {:esqlite, "~> 0.4"},
+      {:esqlite, github: "elbow-jason/esqlite", ref: "b77c341"},
       {:decimal, "~> 1.7"},
       {:credo, "~> 0.10", only: [:dev, :test]},
       {:dialyxir, "~> 1.0.0-rc.4", only: [:dev, :test], runtime: false},

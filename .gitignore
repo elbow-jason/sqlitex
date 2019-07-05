@@ -7,3 +7,4 @@ erl_crash.dump
 /docs
 
 .tool-versions
+.elixir_ls/
